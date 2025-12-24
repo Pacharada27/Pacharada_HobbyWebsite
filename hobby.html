@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Hobby: Drawing</title>
+<style>
+body{
+    margin:0;
+    font-family:"Poppins",sans-serif;
+    background:#F3E5F5;
+    color:#333;
+}
+
+/* ===== STICKY SIDE COLUMNS ===== */
+.side{
+    position:fixed;
+    top:0;
+    width:120px;
+    height:100vh;
+    background:url("images/bg2.jpg") center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:1;
+}
+
+.side.left{left:0;}
+.side.right{right:0;}
+
+.side .decor-box{
+    width:80px;
+    height:80%;
+    background:url("https://images.pexels.com/photos/3527796/pexels-photo-3527796.jpeg?cs=srgb&dl=pexels-didsss-3527796.jpg&fm=jpg") center/cover no-repeat;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+    animation:float 4s ease-in-out infinite;
+}
+
+/* floating animation */
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+}
+
+/* ===== MAIN CONTENT ===== */
+.main{
+    margin:0 140px;
+}
+
+/* Header */
+header{
+    background:url("images/img7.jpg") center/cover no-repeat;
+    color:white;
+    padding:2.5em 0;
+    text-align:center;
+}
+
+/* Nav (Sticky) */
+nav{
+    background:#9575CD;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:12px 0;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{color:#F3E5F5;}
+
+/* Section */
+section{
+    max-width:1000px;
+    margin:auto;
+    padding:40px;
+}
+
+/* Card */
+.card{
+    background:#D1C4E9;
+    border-radius:14px;
+    padding:25px;
+    margin-bottom:30px;
+    transition:transform .35s, box-shadow .35s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 14px 30px rgba(94,53,177,.35);
+}
+
+h2{
+    color:#7E57C2;
+    border-left:6px solid #B39DDB;
+    padding-left:10px;
+}
+
+ul{padding-left:20px;}
+
+/* Table */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+th,td{
+    padding:12px;
+    border:1px solid #ccc;
+}
+th{background:#9575CD;color:white;}
+td{background:#B39DDB;}
+
+/* Gallery */
+#gallery{
+    background:#9575CD;
+    color:white;
+    border-radius:12px;
+    padding:20px;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    transition:transform .35s, box-shadow .35s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.08);
+    box-shadow:0 18px 40px rgba(0,0,0,0.35);
+}
+
+/* Footer */
+footer{
+    background:#7E57C2;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- LEFT DECORATION -->
+<div class="side left">
+    <div class="decor-box"></div>
+</div>
+
+<!-- RIGHT DECORATION -->
+<div class="side right">
+    <div class="decor-box"></div>
+</div>
+
+<div class="main">
+
+<header>
+<h1>My Hobby: Drawing</h1>
+<p>"Arts, purest form of expressing"</p>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="hobby.html">Drawing</a>
+<a href="hobby2.html">Reading</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<section>
+
+<div class="card">
+<h2>Reasons for my love of drawing</h2>
+<ul>
+<li>Captures imagination and emotions</li>
+<li>Helps practice patience</li>
+<li>Relieves stress</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>My Favorite Tools</h2>
+<table>
+<tr>
+<th>Traditional</th>
+<th>Digital</th>
+</tr>
+<tr>
+<td>Mechanical pencils</td>
+<td>IbisPaint X</td>
+</tr>
+<tr>
+<td>Brush pens</td>
+<td>Procreate</td>
+</tr>
+</table>
+</div>
+
+</section>
+
+<section id="gallery">
+<h2>My Art Gallery</h2>
+<div class="gallery-grid">
+    <img src="images/Anteros.gif" alt="Artwork">
+    <img src="images/ante chibi 1.jpg" alt="Artwork">
+    <img src="images/mascots gif mini-ani.gif" alt="Artwork">
+</div>
+</section>
+
+<footer>
+<p>&copy; 2025 Pacharada's</p>
+</footer>
+
+</div>
+
+</body>
+</html>

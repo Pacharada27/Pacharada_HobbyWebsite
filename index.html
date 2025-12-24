@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Hobby Website</title>
+<style>
+body{
+    margin:0;
+    font-family:"Poppins",sans-serif;
+    background:#F3E5F5;
+    color:#333;
+}
+/* ===== SIDE DECORATIONS ===== */
+.side{
+    position:fixed;
+    top:0;
+    width:120px;
+    height:100vh;
+    background:url("images/bg2.jpg") center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:1;
+}
+
+.side.left{left:0;}
+.side.right{right:0;}
+.side .decor-box{
+    width:80px;
+    height:80%;
+    background:url("https://images.pexels.com/photos/3527796/pexels-photo-3527796.jpeg?cs=srgb&dl=pexels-didsss-3527796.jpg&fm=jpg") center/cover no-repeat;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+    animation:float 4s ease-in-out infinite;
+}
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+}
+/* ===== MAIN ===== */
+.main{margin:0 140px;}
+header{
+    background:url("images/img7.jpg") center/cover no-repeat;
+    color:white;
+    padding:2.5em 0;
+    text-align:center;
+}
+/* ===== STICKY NAV ===== */
+nav{
+    background:#9575CD;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:12px 0;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+nav a:hover{color:#F3E5F5;}
+/* ===== SECTION ===== */
+section{max-width:1000px;margin:auto;padding:40px;}
+.card{
+    background:url("https://applescoop.org/image/wallpapers/iphone/purple-marble-best-free-custom-wallpapers-and-backgrounds-for-apple-iphone-17-pro-max-and-air-2025-26-09-2025-1758937064-hd-wallpaper.webp") center/cover no-repeat;
+    border-radius:14px;
+    padding:30px;
+    margin-bottom:30px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    transition:transform 0.35s ease, box-shadow 0.35s ease;
+}
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 28px rgba(94,53,177,0.4);
+}
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 25px;
+    background:#7E57C2;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:bold;
+    transition:transform 0.3s, box-shadow 0.3s;
+}
+.btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 10px 25px rgba(126,87,194,0.5);
+}
+footer{
+    background:#7E57C2;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+</style>
+</head>
+<body>
+
+<div class="side left"><div class="decor-box"></div></div>
+<div class="side right"><div class="decor-box"></div></div>
+
+<div class="main">
+<header>
+<h1>Welcome to My Hobby Website</h1>
+<p>A place where I share what I love</p>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="hobby.html">Drawing</a>
+<a href="hobby2.html">Reading</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<section>
+<div class="card">
+<h2>🎨 Drawing</h2>
+<p>Drawing is my main hobby where I express emotions, creativity, and imagination.</p>
+<a class="btn" href="hobby.html">Explore Drawing</a>
+</div>
+
+<div class="card">
+<h2>📚 Reading</h2>
+<p>Reading takes me through stories, history, and different worlds.</p>
+<a class="btn" href="hobby2.html">Explore Reading</a>
+</div>
+</section>
+
+<footer>
+<p>&copy; 2025 Pacharada's | Created with love</p>
+</footer>
+</div>
+</body>
+</html>
